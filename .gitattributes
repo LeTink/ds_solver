@@ -4,3 +4,4 @@ ds_words.en     linguist-vendored
 ds_words.es     linguist-vendored
 en      linguist-vendored
 es      linguist-vendored
+*.md  linguist-vendored
