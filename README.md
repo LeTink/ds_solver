@@ -5,3 +5,4 @@ It is comprised of one python file, and dictionaries/wordlists for English, Germ
 
 The large dictionary files come from Ubuntu's /usr/share/dict, the ds_words.\<lang\> ones are carfully manually assembled and get extended (amended) occasionally.
 
+Latest update pushed to python 3.6
