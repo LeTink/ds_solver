@@ -6,7 +6,7 @@ import argparse
 def parse_args():
     parser = argparse.ArgumentParser(description="unscramble Drawsomething words")
     parser.add_argument("n", type=int, help="number of characters")
-    parser.add_argument("s", type=str, help="available letters")
+    parser.add_argument("s", type=str, default='utf-8', help="available letters")
     parser.add_argument("-d", action="store_true", help="also check standard dict")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-en", action="store_true", help="English words")
@@ -30,7 +30,7 @@ def find_word(words, n, s):
                 # multiple identical letters if they're not really present)
                 garble.pop(garble.index(letter))
             else: 
-                print word
+                print( word )
                 gotcha = True
     return gotcha
 
@@ -50,7 +50,7 @@ def main():
     n = args.n
       
     # read all words in dictionary into a list
-    with open('ds_words.'+lang) as f:
+    with open('ds_words.'+lang,'r',encoding='utf8') as f:
       words = list(f.read().splitlines())
     print( "From Drawesomething wordlist:" )
     gotcha = find_word( words, n, s)
@@ -58,7 +58,7 @@ def main():
 
     if gotcha == False or args.d:
         print( "From standard american dictionary:" )
-        with open(lang) as f:
+        with open(lang,'r',encoding='utf8') as f:
             words = list(f.read().splitlines())
         find_word(words, n, s)
 
