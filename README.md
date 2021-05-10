@@ -1,5 +1,5 @@
 # ds_solver
-This is my take on a discrambler / solver for Drawsomething games
+This is my take on a descrambler / solver for Drawsomething games
 
 It is comprised of one python file, and dictionaries/wordlists for English, German and Spanish at this stage.
 
